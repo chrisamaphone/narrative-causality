@@ -1,0 +1,507 @@
+Celf ver 2.9. Copyright (C) 2011
+[reading madamebovary-2.clf]
+covent: type.
+novels: type.
+grace: type.
+education: type.
+asp: type.
+cb: type.
+be: type.
+ball: type.
+lb: type.
+llove: type.
+eaware_llove: type.
+rint: type.
+rloveexp: type.
+re: type.
+br: type.
+eguilt: type.
+homais: type.
+hyp: type.
+ecest: type.
+erebel: type.
+lheur: type.
+debt: type.
+rgift: type.
+rhumiliated: type.
+laware: type.
+de: type.
+econcern: type.
+ellove: type.
+elrel: type.
+arsenic: type.
+inheritance: type.
+denounced: type.
+ruin: type.
+edead: type.
+init: Type = {@covent * (@lb * (@cb * (!rloveexp * !homais)))}.
+spendYearsInCovent: Type = covent -o {!novels * (!grace * !education)}.
+readRomanticNovels: Type = novels -o {@asp * (@asp * (@asp * @asp))}.
+marryCharles: Type = (asp * (grace * cb)) -o {@be}.
+invitedToBall: Type = grace -o {@ball}.
+goToBall: Type = (ball * asp) -o {@asp * (@asp * (@asp * @asp))}.
+dontGoToBall: Type = ball -o {@be}.
+leonFallsInLove: Type = (grace * (novels * lb)) -o {@llove}.
+emmaRealizesLove: Type = (llove * be) -o {@eaware_llove * @llove}.
+pushLeonAway: Type = (llove * eaware_llove) -o {@be}.
+rodolpheSeduce: Type = grace -o {@rint}.
+acceptRodolphe: Type = (asp * (asp * (asp * (asp * rint)))) -o {@re}.
+rodolpheRelationshipFalters: Type = re -o {@br * (@eguilt * @re)}.
+persuadeCharles: Type = (eguilt * homais) -o {@hyp * @ecest}.
+amputateHypolyte: Type = (ecest * hyp) -o {!erebel * !lheur}.
+purchaseGift: Type = lheur -o {@debt * @rgift}.
+offerGift: Type = rgift -o {@rhumiliated * @laware}.
+purchaseProstheticLeg: Type = (erebel * lheur) -o {@debt * (@debt * @debt)}.
+rodolpheBreakUp: Type = (rhumiliated * (rloveexp * re)) -o {@de}.
+getSick: Type = de -o {@debt * (@debt * (@debt * (@debt * !econcern)))}.
+meetLeonAgain: Type = (econcern * (homais * (grace * education))) -o {@llove * @ellove}.
+acceptLeonAdvances: Type = (llove * (ellove * erebel)) -o {@elrel}.
+mrBovaryDeath: Type = (elrel * (econcern * homais)) -o {@arsenic * (@inheritance * @elrel)}.
+reimburseSomeDebt: Type = (inheritance * (lheur * (debt * (debt * (debt * debt))))) -o {1}.
+leonReceivesLetter: Type = elrel -o {@denounced * @elrel}.
+loveForLeonFalters: Type = ellove -o {@be}.
+leonsBoss: Type = (llove * denounced) -o {1}.
+contractDebts: Type = be -o {@debt}.
+contractImportantDebts: Type = be -o {@debt * (@debt * @debt)}.
+ruinByDebt: Type = (debt * (debt * (debt * (debt * (debt * (debt * debt)))))) -o {@ruin}.
+suicide: Type = (ruin * (arsenic * erebel)) -o {@edead}.
+story: Type = {init * (@spendYearsInCovent * (@readRomanticNovels * (@invitedToBall * (@marryCharles * (@(goToBall & dontGoToBall) * (@leonFallsInLove * (@emmaRealizesLove * (@pushLeonAway * (@rodolpheSeduce * (@acceptRodolphe * (@rodolpheRelationshipFalters * (@persuadeCharles * (@amputateHypolyte * (@purchaseGift * (@offerGift * (@purchaseProstheticLeg * (@rodolpheBreakUp * (@getSick * (@meetLeonAgain * (@acceptLeonAdvances * (@mrBovaryDeath * (@reimburseSomeDebt * (@leonReceivesLetter * (@loveForLeonFalters * (@leonsBoss * (@contractDebts * (@contractImportantDebts * (@ruinByDebt * @suicide))))))))))))))))))))))))))))}.
+Query (*, *, *, 50) story -o {edead}.
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {[@X40, [@X41, [@X42, @X43]]]} = X4 X37 in 
+    let {@X44} = X5 X38 in 
+    let {@X45} = X6 [X42, [X38, X34]] in 
+    let {@X46} = X11 X38 in 
+    let {@X47} = X8 [X38, [X37, X33]] in 
+    let {[@X48, [@X49, @X50]]} = X29 X45 in 
+    let {[@X51, [@X52, [@X53, @X54]]]} = X7 #1 [X44, X41] in 
+    let {@X55} = X12 [X54, [X52, [X53, [X40, X46]]]] in 
+    let {[@X56, [@X57, @X58]]} = X13 X55 in 
+    let {[@X59, @X60]} = X14 [X57, X36] in 
+    let {[!X61, !X62]} = X15 [X60, X59] in 
+    let {[@X63, [@X64, @X65]]} = X18 [X61, X62] in 
+    let {[@X66, @X67]} = X16 X62 in 
+    let {[@X68, @X69]} = X17 X67 in 
+    let {@X70} = X30 [X49, [X48, [X66, [X65, [X63, [X50, X64]]]]]] in 
+    let {@X71} = X19 [X68, [X35, X58]] in 
+    let {[@X72, [@X73, [@X74, [@X75, !X76]]]]} = X20 X71 in 
+    let {[@X77, @X78]} = X21 [X76, [X36, [X38, X39]]] in 
+    let {@X79} = X22 [X77, [X78, X61]] in 
+    let {[@X80, @X81]} = X25 X79 in 
+    let {[@X82, [@X83, @X84]]} = X23 [X81, [X76, X36]] in 
+    let {@X85} = X31 [X70, [X82, X61]] in 
+    let {1} = X27 [X47, X80] in 
+    let {1} = X24 [X83, [X62, [X74, [X72, [X73, X75]]]]] in X85}
+Iteration 6
+Iteration 7
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {@X40} = X8 [X38, [X37, X33]] in 
+    let {[@X41, [@X42, [@X43, @X44]]]} = X4 X37 in 
+    let {@X45} = X11 X38 in 
+    let {@X46} = X6 [X41, [X38, X34]] in 
+    let {[@X47, @X48]} = X9 [X40, X46] in 
+    let {@X49} = X5 X38 in 
+    let {[@X50, [@X51, [@X52, @X53]]]} = X7 #1 [X49, X43] in 
+    let {@X54} = X12 [X52, [X51, [X50, [X53, X45]]]] in 
+    let {[@X55, [@X56, @X57]]} = X13 X54 in 
+    let {@X58} = X10 [X48, X47] in 
+    let {[@X59, @X60]} = X14 [X56, X36] in 
+    let {[!X61, !X62]} = X15 [X60, X59] in 
+    let {[@X63, [@X64, @X65]]} = X29 X58 in 
+    let {[@X66, @X67]} = X16 X62 in 
+    let {[@X68, [@X69, @X70]]} = X18 [X61, X62] in 
+    let {[@X71, @X72]} = X17 X67 in 
+    let {@X73} = X19 [X71, [X35, X57]] in 
+    let {[@X74, [@X75, [@X76, [@X77, !X78]]]]} = X20 X73 in 
+    let {[@X79, @X80]} = X21 [X78, [X36, [X38, X39]]] in 
+    let {@X81} = X22 [X79, [X80, X61]] in 
+    let {[@X82, [@X83, @X84]]} = X23 [X81, [X78, X36]] in 
+    let {[@X85, @X86]} = X25 X84 in 
+    let {1} = X24 [X83, [X62, [X70, [X65, [X74, X77]]]]] in 
+    let {@X87} = X30 [X68, [X75, [X64, [X76, [X66, [X63, X69]]]]]] in 
+    let {@X88} = X31 [X87, [X82, X61]] in X88}
+Iteration 8
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {[@X40, [@X41, [@X42, @X43]]]} = X4 X37 in 
+    let {@X44} = X5 X38 in 
+    let {@X45} = X11 X38 in 
+    let {@X46} = X12 [X41, [X43, [X42, [X40, X45]]]] in 
+    let {[@X47, [@X48, @X49]]} = X13 X46 in 
+    let {[@X50, @X51]} = X14 [X48, X36] in 
+    let {[!X52, !X53]} = X15 [X51, X50] in 
+    let {@X54} = X7 #2 X44 in 
+    let {@X55} = X8 [X38, [X37, X33]] in 
+    let {[@X56, @X57]} = X9 [X55, X54] in 
+    let {[@X58, @X59]} = X16 X53 in 
+    let {[@X60, [@X61, @X62]]} = X18 [X52, X53] in 
+    let {[@X63, @X64]} = X17 X59 in 
+    let {@X65} = X19 [X63, [X35, X49]] in 
+    let {@X66} = X10 [X57, X56] in 
+    let {[@X67, [@X68, @X69]]} = X29 X66 in 
+    let {[@X70, [@X71, [@X72, [@X73, !X74]]]]} = X20 X65 in 
+    let {@X75} = X30 [X62, [X68, [X67, [X70, [X58, [X72, X69]]]]]] in 
+    let {[@X76, @X77]} = X21 [X74, [X36, [X38, X39]]] in 
+    let {@X78} = X22 [X76, [X77, X52]] in 
+    let {[@X79, @X80]} = X25 X78 in 
+    let {[@X81, [@X82, @X83]]} = X23 [X80, [X74, X36]] in 
+    let {@X84} = X31 [X75, [X81, X52]] in 
+    let {1} = X24 [X82, [X53, [X60, [X73, [X61, X71]]]]] in X84}
+Iteration 9
+Iteration 10
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {@X40} = X11 X38 in 
+    let {[@X41, [@X42, [@X43, @X44]]]} = X4 X37 in 
+    let {@X45} = X12 [X42, [X43, [X41, [X44, X40]]]] in 
+    let {@X46} = X8 [X38, [X37, X33]] in 
+    let {[@X47, [@X48, @X49]]} = X13 X45 in 
+    let {@X50} = X5 X38 in 
+    let {@X51} = X7 #2 X50 in 
+    let {[@X52, @X53]} = X9 [X46, X51] in 
+    let {@X54} = X10 [X53, X52] in 
+    let {[@X55, [@X56, @X57]]} = X29 X54 in 
+    let {[@X58, @X59]} = X14 [X48, X36] in 
+    let {[!X60, !X61]} = X15 [X59, X58] in 
+    let {[@X62, [@X63, @X64]]} = X18 [X60, X61] in 
+    let {[@X65, @X66]} = X16 X61 in 
+    let {[@X67, @X68]} = X17 X66 in 
+    let {@X69} = X30 [X62, [X63, [X64, [X57, [X55, [X65, X56]]]]]] in 
+    let {@X70} = X19 [X67, [X35, X49]] in 
+    let {[@X71, [@X72, [@X73, [@X74, !X75]]]]} = X20 X70 in 
+    let {[@X76, @X77]} = X21 [X75, [X36, [X38, X39]]] in 
+    let {@X78} = X22 [X76, [X77, X60]] in 
+    let {[@X79, [@X80, @X81]]} = X23 [X78, [X75, X36]] in 
+    let {[@X82, @X83]} = X25 X81 in 
+    let {1} = X24 [X80, [X61, [X72, [X71, [X74, X73]]]]] in 
+    let {@X84} = X31 [X69, [X79, X60]] in X84}
+Iteration 11
+Iteration 12
+Iteration 13
+Iteration 14
+Iteration 15
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {@X40} = X5 X38 in 
+    let {[@X41, [@X42, [@X43, @X44]]]} = X4 X37 in 
+    let {[@X45, [@X46, [@X47, @X48]]]} = X7 #1 [X40, X44] in 
+    let {@X49} = X11 X38 in 
+    let {@X50} = X8 [X38, [X37, X33]] in 
+    let {@X51} = X12 [X45, [X42, [X43, [X41, X49]]]] in 
+    let {@X52} = X6 [X47, [X38, X34]] in 
+    let {@X53} = X28 X52 in 
+    let {[@X54, [@X55, @X56]]} = X13 X51 in 
+    let {[@X57, @X58]} = X14 [X55, X36] in 
+    let {[!X59, !X60]} = X15 [X58, X57] in 
+    let {[@X61, [@X62, @X63]]} = X18 [X59, X60] in 
+    let {[@X64, @X65]} = X16 X60 in 
+    let {[@X66, @X67]} = X17 X65 in 
+    let {@X68} = X19 [X66, [X35, X56]] in 
+    let {[@X69, [@X70, [@X71, [@X72, !X73]]]]} = X20 X68 in 
+    let {@X74} = X30 [X64, [X63, [X61, [X62, [X71, [X72, X70]]]]]] in 
+    let {[@X75, @X76]} = X21 [X73, [X36, [X38, X39]]] in 
+    let {@X77} = X22 [X75, [X76, X59]] in 
+    let {[@X78, @X79]} = X25 X77 in 
+    let {1} = X27 [X50, X78] in 
+    let {[@X80, [@X81, @X82]]} = X23 [X79, [X73, X36]] in 
+    let {@X83} = X31 [X74, [X80, X59]] in X83}
+Iteration 16
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {@X40} = X5 X38 in 
+    let {[@X41, [@X42, [@X43, @X44]]]} = X4 X37 in 
+    let {@X45} = X11 X38 in 
+    let {@X46} = X8 [X38, [X37, X33]] in 
+    let {@X47} = X7 #2 X40 in 
+    let {[@X48, @X49]} = X9 [X46, X47] in 
+    let {@X50} = X12 [X43, [X44, [X41, [X42, X45]]]] in 
+    let {[@X51, [@X52, @X53]]} = X13 X50 in 
+    let {[@X54, @X55]} = X14 [X52, X36] in 
+    let {@X56} = X10 [X49, X48] in 
+    let {@X57} = X28 X56 in 
+    let {[!X58, !X59]} = X15 [X55, X54] in 
+    let {[@X60, @X61]} = X16 X59 in 
+    let {[@X62, @X63]} = X17 X61 in 
+    let {[@X64, [@X65, @X66]]} = X18 [X58, X59] in 
+    let {@X67} = X19 [X62, [X35, X53]] in 
+    let {[@X68, [@X69, [@X70, [@X71, !X72]]]]} = X20 X67 in 
+    let {@X73} = X30 [X69, [X68, [X71, [X60, [X66, [X57, X70]]]]]] in 
+    let {[@X74, @X75]} = X21 [X72, [X36, [X38, X39]]] in 
+    let {@X76} = X22 [X74, [X75, X58]] in 
+    let {[@X77, @X78]} = X25 X76 in 
+    let {[@X79, [@X80, @X81]]} = X23 [X78, [X72, X36]] in 
+    let {@X82} = X31 [X73, [X79, X58]] in X82}
+Iteration 17
+Iteration 18
+Iteration 19
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {@X40} = X5 X38 in 
+    let {@X41} = X8 [X38, [X37, X33]] in 
+    let {[@X42, [@X43, [@X44, @X45]]]} = X4 X37 in 
+    let {@X46} = X11 X38 in 
+    let {@X47} = X6 [X45, [X38, X34]] in 
+    let {[@X48, @X49]} = X9 [X41, X47] in 
+    let {[@X50, [@X51, [@X52, @X53]]]} = X7 #1 [X40, X43] in 
+    let {@X54} = X10 [X49, X48] in 
+    let {@X55} = X12 [X42, [X51, [X53, [X52, X46]]]] in 
+    let {@X56} = X28 X54 in 
+    let {[@X57, [@X58, @X59]]} = X13 X55 in 
+    let {[@X60, @X61]} = X14 [X58, X36] in 
+    let {[!X62, !X63]} = X15 [X61, X60] in 
+    let {[@X64, [@X65, @X66]]} = X18 [X62, X63] in 
+    let {[@X67, @X68]} = X16 X63 in 
+    let {[@X69, @X70]} = X17 X68 in 
+    let {@X71} = X19 [X69, [X35, X59]] in 
+    let {[@X72, [@X73, [@X74, [@X75, !X76]]]]} = X20 X71 in 
+    let {[@X77, @X78]} = X21 [X76, [X36, [X38, X39]]] in 
+    let {@X79} = X30 [X64, [X65, [X75, [X72, [X56, [X66, X74]]]]]] in 
+    let {@X80} = X22 [X77, [X78, X62]] in 
+    let {[@X81, @X82]} = X25 X80 in 
+    let {[@X83, [@X84, @X85]]} = X23 [X82, [X76, X36]] in 
+    let {@X86} = X31 [X79, [X83, X62]] in X86}
+Iteration 20
+Iteration 21
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {[@X40, [@X41, [@X42, @X43]]]} = X4 X37 in 
+    let {@X44} = X8 [X38, [X37, X33]] in 
+    let {@X45} = X11 X38 in 
+    let {@X46} = X12 [X40, [X41, [X43, [X42, X45]]]] in 
+    let {@X47} = X5 X38 in 
+    let {@X48} = X7 #2 X47 in 
+    let {[@X49, [@X50, @X51]]} = X29 X48 in 
+    let {[@X52, [@X53, @X54]]} = X13 X46 in 
+    let {[@X55, @X56]} = X14 [X53, X36] in 
+    let {[!X57, !X58]} = X15 [X56, X55] in 
+    let {[@X59, [@X60, @X61]]} = X18 [X57, X58] in 
+    let {[@X62, @X63]} = X16 X58 in 
+    let {[@X64, @X65]} = X17 X63 in 
+    let {@X66} = X19 [X64, [X35, X54]] in 
+    let {[@X67, [@X68, [@X69, [@X70, !X71]]]]} = X20 X66 in 
+    let {[@X72, @X73]} = X21 [X71, [X36, [X38, X39]]] in 
+    let {@X74} = X22 [X72, [X73, X57]] in 
+    let {@X75} = X30 [X67, [X62, [X61, [X51, [X50, [X59, X68]]]]]] in 
+    let {[@X76, @X77]} = X25 X74 in 
+    let {1} = X27 [X44, X76] in 
+    let {[@X78, [@X79, @X80]]} = X23 [X77, [X71, X36]] in 
+    let {@X81} = X31 [X75, [X78, X57]] in 
+    let {1} = X24 [X79, [X58, [X69, [X49, [X70, X60]]]]] in X81}
+Iteration 22
+Iteration 23
+Iteration 24
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {@X40} = X8 [X38, [X37, X33]] in 
+    let {@X41} = X5 X38 in 
+    let {[@X42, [@X43, [@X44, @X45]]]} = X4 X37 in 
+    let {@X46} = X11 X38 in 
+    let {[@X47, [@X48, [@X49, @X50]]]} = X7 #1 [X41, X42] in 
+    let {@X51} = X6 [X49, [X38, X34]] in 
+    let {@X52} = X12 [X44, [X48, [X47, [X50, X46]]]] in 
+    let {@X53} = X28 X51 in 
+    let {[@X54, [@X55, @X56]]} = X13 X52 in 
+    let {[@X57, @X58]} = X14 [X55, X36] in 
+    let {[!X59, !X60]} = X15 [X58, X57] in 
+    let {[@X61, @X62]} = X16 X60 in 
+    let {[@X63, [@X64, @X65]]} = X18 [X59, X60] in 
+    let {[@X66, @X67]} = X17 X62 in 
+    let {@X68} = X19 [X66, [X35, X56]] in 
+    let {[@X69, [@X70, [@X71, [@X72, !X73]]]]} = X20 X68 in 
+    let {@X74} = X30 [X65, [X71, [X72, [X69, [X61, [X64, X70]]]]]] in 
+    let {[@X75, @X76]} = X21 [X73, [X36, [X38, X39]]] in 
+    let {@X77} = X22 [X40, [X76, X59]] in 
+    let {[@X78, [@X79, @X80]]} = X23 [X77, [X73, X36]] in 
+    let {@X81} = X31 [X74, [X78, X59]] in 
+    let {[@X82, @X83]} = X25 X80 in 
+    let {1} = X27 [X75, X82] in X81}
+Iteration 25
+Iteration 26
+Iteration 27
+Iteration 28
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {[@X40, [@X41, [@X42, @X43]]]} = X4 X37 in 
+    let {@X44} = X5 X38 in 
+    let {@X45} = X8 [X38, [X37, X33]] in 
+    let {[@X46, [@X47, [@X48, @X49]]]} = X7 #1 [X44, X41] in 
+    let {@X50} = X6 [X40, [X38, X34]] in 
+    let {@X51} = X11 X38 in 
+    let {[@X52, [@X53, @X54]]} = X29 X50 in 
+    let {@X55} = X12 [X43, [X47, [X49, [X48, X51]]]] in 
+    let {[@X56, [@X57, @X58]]} = X13 X55 in 
+    let {[@X59, @X60]} = X14 [X57, X36] in 
+    let {[!X61, !X62]} = X15 [X60, X59] in 
+    let {[@X63, @X64]} = X16 X62 in 
+    let {[@X65, [@X66, @X67]]} = X18 [X61, X62] in 
+    let {[@X68, @X69]} = X17 X64 in 
+    let {@X70} = X19 [X68, [X35, X58]] in 
+    let {[@X71, [@X72, [@X73, [@X74, !X75]]]]} = X20 X70 in 
+    let {@X76} = X30 [X72, [X54, [X71, [X73, [X65, [X63, X66]]]]]] in 
+    let {[@X77, @X78]} = X21 [X75, [X36, [X38, X39]]] in 
+    let {@X79} = X22 [X77, [X78, X61]] in 
+    let {[@X80, [@X81, @X82]]} = X23 [X79, [X75, X36]] in 
+    let {@X83} = X31 [X76, [X80, X61]] in 
+    let {[@X84, @X85]} = X25 X82 in 
+    let {1} = X27 [X45, X84] in 
+    let {1} = X24 [X81, [X62, [X52, [X74, [X53, X67]]]]] in X83}
+Iteration 29
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {[@X40, [@X41, [@X42, @X43]]]} = X4 X37 in 
+    let {@X44} = X5 X38 in 
+    let {[@X45, [@X46, [@X47, @X48]]]} = X7 #1 [X44, X42] in 
+    let {@X49} = X11 X38 in 
+    let {@X50} = X12 [X47, [X43, [X40, [X46, X49]]]] in 
+    let {@X51} = X6 [X45, [X38, X34]] in 
+    let {@X52} = X8 [X38, [X37, X33]] in 
+    let {[@X53, @X54]} = X9 [X52, X51] in 
+    let {[@X55, [@X56, @X57]]} = X13 X50 in 
+    let {[@X58, @X59]} = X14 [X56, X36] in 
+    let {@X60} = X10 [X54, X53] in 
+    let {[!X61, !X62]} = X15 [X59, X58] in 
+    let {@X63} = X28 X60 in 
+    let {[@X64, @X65]} = X16 X62 in 
+    let {[@X66, [@X67, @X68]]} = X18 [X61, X62] in 
+    let {[@X69, @X70]} = X17 X65 in 
+    let {@X71} = X19 [X69, [X35, X57]] in 
+    let {[@X72, [@X73, [@X74, [@X75, !X76]]]]} = X20 X71 in 
+    let {@X77} = X30 [X75, [X74, [X68, [X67, [X64, [X63, X73]]]]]] in 
+    let {[@X78, @X79]} = X21 [X76, [X36, [X38, X39]]] in 
+    let {@X80} = X22 [X78, [X79, X61]] in 
+    let {[@X81, [@X82, @X83]]} = X23 [X80, [X76, X36]] in 
+    let {@X84} = X31 [X77, [X81, X61]] in 
+    let {[@X85, @X86]} = X25 X83 in X84}
+Iteration 30
+Iteration 31
+Iteration 32
+Iteration 33
+Iteration 34
+Iteration 35
+Iteration 36
+Iteration 37
+Iteration 38
+Iteration 39
+Iteration 40
+Iteration 41
+Iteration 42
+Iteration 43
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {[@X40, [@X41, [@X42, @X43]]]} = X4 X37 in 
+    let {@X44} = X5 X38 in 
+    let {@X45} = X11 X38 in 
+    let {[@X46, [@X47, [@X48, @X49]]]} = X7 #1 [X44, X43] in 
+    let {@X50} = X6 [X40, [X38, X34]] in 
+    let {@X51} = X28 X50 in 
+    let {@X52} = X12 [X46, [X41, [X49, [X48, X45]]]] in 
+    let {@X53} = X8 [X38, [X37, X33]] in 
+    let {[@X54, [@X55, @X56]]} = X13 X52 in 
+    let {[@X57, @X58]} = X14 [X55, X36] in 
+    let {[!X59, !X60]} = X15 [X58, X57] in 
+    let {[@X61, @X62]} = X16 X60 in 
+    let {[@X63, [@X64, @X65]]} = X18 [X59, X60] in 
+    let {[@X66, @X67]} = X17 X62 in 
+    let {@X68} = X19 [X66, [X35, X56]] in 
+    let {[@X69, [@X70, [@X71, [@X72, !X73]]]]} = X20 X68 in 
+    let {[@X74, @X75]} = X21 [X73, [X36, [X38, X39]]] in 
+    let {@X76} = X30 [X51, [X61, [X71, [X65, [X72, [X69, X63]]]]]] in 
+    let {@X77} = X22 [X53, [X75, X59]] in 
+    let {[@X78, @X79]} = X25 X77 in 
+    let {[@X80, [@X81, @X82]]} = X23 [X79, [X73, X36]] in 
+    let {@X83} = X31 [X76, [X80, X59]] in 
+    let {1} = X27 [X74, X78] in X83}
+Iteration 44
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {@X40} = X8 [X38, [X37, X33]] in 
+    let {@X41} = X11 X38 in 
+    let {@X42} = X5 X38 in 
+    let {@X43} = X7 #2 X42 in 
+    let {[@X44, @X45]} = X9 [X40, X43] in 
+    let {[@X46, [@X47, [@X48, @X49]]]} = X4 X37 in 
+    let {@X50} = X10 [X45, X44] in 
+    let {@X51} = X12 [X46, [X47, [X49, [X48, X41]]]] in 
+    let {[@X52, [@X53, @X54]]} = X13 X51 in 
+    let {@X55} = X28 X50 in 
+    let {[@X56, @X57]} = X14 [X53, X36] in 
+    let {[!X58, !X59]} = X15 [X57, X56] in 
+    let {[@X60, [@X61, @X62]]} = X18 [X58, X59] in 
+    let {[@X63, @X64]} = X16 X59 in 
+    let {[@X65, @X66]} = X17 X64 in 
+    let {@X67} = X19 [X65, [X35, X54]] in 
+    let {[@X68, [@X69, [@X70, [@X71, !X72]]]]} = X20 X67 in 
+    let {[@X73, @X74]} = X21 [X72, [X36, [X38, X39]]] in 
+    let {@X75} = X22 [X73, [X74, X58]] in 
+    let {@X76} = X30 [X68, [X61, [X71, [X69, [X63, [X62, X55]]]]]] in 
+    let {[@X77, @X78]} = X25 X75 in 
+    let {[@X79, [@X80, @X81]]} = X23 [X78, [X72, X36]] in 
+    let {@X82} = X31 [X76, [X79, X58]] in X82}
+Iteration 45
+Iteration 46
+Iteration 47
+Iteration 48
+Iteration 49
+Iteration 50
+Solution: \X1. {
+    let {[X2, [@X3, [@X4, [@X5, [@X6, [@X7, [@X8, [@X9, [@X10, [@X11, [@X12, [@X13, [@X14, [@X15, [@X16, [@X17, [@X18, [@X19, [@X20, [@X21, [@X22, [@X23, [@X24, [@X25, [@X26, [@X27, [@X28, [@X29, [@X30, @X31]]]]]]]]]]]]]]]]]]]]]]]]]]]]]} = X1 in 
+    let {[@X32, [@X33, [@X34, [!X35, !X36]]]]} = X2 in 
+    let {[!X37, [!X38, !X39]]} = X3 X32 in 
+    let {[@X40, [@X41, [@X42, @X43]]]} = X4 X37 in 
+    let {@X44} = X11 X38 in 
+    let {@X45} = X8 [X38, [X37, X33]] in 
+    let {@X46} = X12 [X41, [X40, [X42, [X43, X44]]]] in 
+    let {@X47} = X5 X38 in 
+    let {@X48} = X7 #2 X47 in 
+    let {[@X49, @X50]} = X9 [X45, X48] in 
+    let {@X51} = X10 [X50, X49] in 
+    let {[@X52, [@X53, @X54]]} = X29 X51 in 
+    let {[@X55, [@X56, @X57]]} = X13 X46 in 
+    let {[@X58, @X59]} = X14 [X56, X36] in 
+    let {[!X60, !X61]} = X15 [X59, X58] in 
+    let {[@X62, [@X63, @X64]]} = X18 [X60, X61] in 
+    let {[@X65, @X66]} = X16 X61 in 
+    let {@X67} = X30 [X63, [X54, [X52, [X65, [X62, [X53, X64]]]]]] in 
+    let {[@X68, @X69]} = X17 X66 in 
+    let {@X70} = X19 [X68, [X35, X57]] in 
+    let {[@X71, [@X72, [@X73, [@X74, !X75]]]]} = X20 X70 in 
+    let {[@X76, @X77]} = X21 [X75, [X36, [X38, X39]]] in 
+    let {@X78} = X22 [X76, [X77, X60]] in 
+    let {[@X79, [@X80, @X81]]} = X23 [X78, [X75, X36]] in 
+    let {[@X82, @X83]} = X25 X81 in 
+    let {@X84} = X31 [X67, [X79, X60]] in 
+    let {1} = X24 [X80, [X61, [X71, [X74, [X73, X72]]]]] in X84}
+[closing madamebovary-2.clf]
