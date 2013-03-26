@@ -1,0 +1,82 @@
+% Encoding of the causality in Run Lola Run (based on Wikipedia)
+% Chris Martens
+% 3/25/2013
+% In progress.
+
+
+% 3/26/2013 - This is missing a bigger-picture understanding of how to
+% encode narratives. In this encoding there's some sort of strange merging
+% of characters and events - lots of choices to be made that I have no
+% system for making. Potentially related to what Gwenn has mentioned about
+% a distinction between "from the POV of one character" and "emergent
+% storytelling."
+
+
+punk_with_dog : type.
+run : type.
+faster : type.
+limp : type.
+collide_with_carriage : type.
+cause_accident : type.
+encounter_bike_man : type.
+accuse_bike_man_of_theft : type.
+refuse_bike_man's_offer : type.
+encounter_father : type.
+
+baby_carriage : type.
+baby_carriage' : type.
+woman_wins_lottery : type.
+child_care : type.
+woman_steals_baby : type.
+car : type.
+accident : type.
+bike_man : type.
+bike_man_mugged : type.
+bike_man_meets_nurse : type.
+bike_man_becomes_tramp : type.
+bank : type.
+mistress_conversation : type.
+mistress_reveals_pregnant : type.
+mistress_reveals_with_another_man : type.
+father_leaves_home : type.
+
+
+dog_growls : punk_with_dog -o {run}.
+dog_trips_lola : punk_with_dog -o {run * limp}.
+lola_leaps_punk : punk_with_dog -o {run * faster}.
+
+- : run * baby_carriage -o {collide_with_carriage * baby_carriage'}.
+
+- : baby_carriage' -o {woman_wins_lottery}.
+- : baby_carriage' -o {child_care}.
+- : child_care -o {woman_steals_baby}.
+
+- : collide_with_carriage * car -o {cause_accident}.
+
+- : run * faster -o {bank * faster}. % skip carriage and car.
+
+- : cause_accident * bike_man -o {encounter_bike_man * accident}.
+
+- : encounter_bike_man -o {refuse_bike_man's_offer * bank}.
+- : refuse_bike_man's_offer -o {bike_man_mugged}.
+- : bike_man_mugged -o {bike_man_meets_nurse}.
+
+- : encounter_bike_man -o {accuse_bike_man_of_theft * bank}.
+- : accuse_bike_man_of_theft -o {bike_man_becomes_tramp}.
+
+- : bank -o {encounter_father}.
+
+- : mistress_conversation -o {mistress_reveals_pregnant}.
+- : mistress_reveals_pregnant * limp -o
+        {mistress_reveals_with_another_man}.
+- : encounter_father * mistress_reveals_pregnant -o {father_leaves_home}.
+- : mistress_conversation * faster -o {1}. % misses father completely.
+
+
+
+init : type = {baby_carriage 
+             * bike_man 
+             * car 
+             * punk_with_dog 
+             * mistress_conversation}.
+#trace * init.
