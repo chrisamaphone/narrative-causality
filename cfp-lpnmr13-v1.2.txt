@@ -1,0 +1,200 @@
+                               Call for Papers
+---------------------------------------------------------------------------
+
+                       12th International Conference on 
+                Logic Programming and Nonmonotonic Reasoning
+                                 LPNMR 2013
+
+                           http://lpnmr2013.udc.es
+
+                               Corunna, Spain
+                            September 15-19, 2013
+---------------------------------------------------------------------------
+
+AIMS AND SCOPE
+
+ LPNMR 2013 is the twelfth in the series of international meetings on 
+ logic programming and nonmonotonic reasoning. LPNMR is a forum for 
+ exchanging ideas on declarative logic programming, nonmonotonic reasoning, 
+ and  knowledge representation. The aim of the conference is to facilitate 
+ interactions between those researchers and practitioners interested in the 
+ design and implementation of logic-based programming languages and 
+ database systems, and those who work in the area of knowledge 
+ representation and nonmonotonic reasoning. LPNMR strives to encompass 
+ theoretical and experimental studies that have led or will lead to the 
+ construction of systems for declarative programming and knowledge 
+ representation, as well as their use in practical applications.
+
+ Authors are invited to submit papers presenting original and unpublished 
+ research on all aspects of nonmonotonic approaches in logic programming 
+ and knowledge representation. We invite submissions of both long and 
+ short papers.
+
+TOPICS
+
+ Conference topics include, but are not limited to:
+
+ 1. Foundations of LPNMR Systems: 
+   * Semantics of new and existing languages;
+   * Action languages, Causality;
+   * Relationships among formalisms;
+   * Complexity and expressive power;
+   * Inference algorithms and heuristics for LPNMR systems;
+   * Extensions of traditional LPNMR languages such as new logical 
+     connectives or new inference capabilities;
+   * Updates, revision, and other operations on LPNMR systems;
+   * Uncertainty in LPNMR systems.
+
+ 2. Implementation of LPNMR systems: 
+   * System descriptions, comparisons, evaluations;
+   * LPNMR benchmarks.
+
+ 3. Applications of LPNMR:
+   * Use of LPNMR in formalization of Commonsense Reasoning and other 
+     areas of KR;
+   * LPNMR languages and algorithms in planning, diagnosis, argumentation,
+     reasoning with preferences, decision making and policies;
+   * Applications of LPNMR languages in data integration and exchange 
+     systems, software engineering and model checking;  
+   * Applications of LPNMR to linguistics, psychology, and other sciences
+   * Integration of LPNMR systems with other computational paradigms;
+   * Embedded LPNMR: Systems using LPNMR subsystems.
+
+SUBMISSION
+
+ LPNMR 2013 welcomes submissions of long papers (13 pages) or short papers 
+ (6 pages) in the following categories:
+
+   * Technical papers
+   * System descriptions
+   * Application descriptions
+ 
+ The indicated number of pages includes title page, references and 
+ figures. All submissions will be peer-reviewed and accepted papers will 
+ appear in the conference proceedings published in the Springer-Verlag 
+ Lecture Notes in Artificial Intelligence (LNAI/LNCS) series. At least one
+ author of each accepted paper is expected to register for the conference
+ to present the work. Submissions must be formatted according to the
+ Springer LNCS author instructions,
+
+             http://www.springer.com/comp/lncs/Authors.html
+
+ must be written in English, and present original research. Paper 
+ submission will be electronic through
+
+          https://www.easychair.org/conferences/?conf=lpnmr2013
+
+ The two best contributions will be offered a fast-track publication in 
+ the journal Theory and Practice of Logic Programming (TPLP).
+
+MULTIPLE SUBMISSION POLICY
+
+ LPNMR 2013 will not accept any paper which, at the time of submission, is 
+ under review or has already been published or accepted for publication in
+ a journal or another conference. Authors are also required not to submit
+ their papers elsewhere during LPNMR's review period. However, these
+ restrictions do not apply to previous workshops with a limited audience
+ and without archival proceedings.
+
+WORKSHOPS
+
+ LPNMR-13 will also include five specialized workshops:
+
+   * WoMO'13
+     7th Workshop on Modular Ontologies
+
+   * ARCOE-LogIC'13
+     5th Intl. Workshop on Acquisition, Representation and Reasoning with 
+     Contextualized Knowledge
+
+   * GTTV'13
+     2nd Workshop on Grounding and Transformations for Theories with 
+     Variables
+
+   * LNMR'13
+     1st Workshop on Learning and Non-monotonic Reasoning
+
+   * NLPAR'13
+     1st Workshop on Natural Language Processing and Automated 
+     Reasoning
+
+IMPORTANT DATES
+
+   * Paper registration: April 17th, 2013
+   * Paper submission:   April 24th, 2013
+   * Notification:       June 5th, 2013
+   * Final versions due: June 19th, 2013
+
+VENUE
+
+ Corunna (A Coruña) is a busy port located at the entrance of an estuary on 
+ the Atlantic coast of the north-western corner of Spain. The city features 
+ a complete offer of leisure activities ranging from beach sports along the
+ seafront that surrounds it (surfing, sailing, biking, etc) to a complete 
+ program of cultural events, an active shopping area, restaurants, tapas 
+ bars and a crowded night life. The conference will be held at the hotel 
+ Melia Maria Pita.
+
+PROGRAM CHAIRS
+
+ Pedro Cabalar, University of Corunna, Spain
+ Tran Cao Son, New Mexico State University, NM, USA
+
+WORKSHOPS CHAIR
+ 
+ Marcello Balduccini, Kodak Research Labs, USA
+
+PROGRAM COMMITTEE
+
+ Jose Julio Alferes, Universidade Nova de Lisboa, Portugal
+ Chitta Baral, Arizona State University, USA
+ Leopoldo Bertossi, Carleton University, Canada
+ Gerhard Brewka, University of Leipzig, Germany
+ Stefania Costantini, University of L'Aquila, Italy
+ Marina De Vos, University of Bath, UK
+ James Delgrande, Simon Fraser University, Canada
+ Marc Denecker, KU Leuven, Belgium
+ Yannis Dimopoulos, University of Cyprus, Cyprus
+ Jurgen Dix, Clausthal University of Technology, Germany
+ Agostino Dovier, University of Udine, Italy
+ Thomas Eiter, Vienna University of Technology, Austria
+ Esra Erdem, Sabanci University, Turkey
+ Wolfgang Faber, University of Calabria, Italy
+ Michael Fink, Vienna University of Technology, Austria
+ Andrea Formisano, University of Perugia, Italy
+ Martin Gebser, University of Potsdam, Germany
+ Michael Gelfond, Texas Tech University, USA
+ Giovambattista Ianni, University of Calabria, Italy
+ Tomi Janhunen, Aalto University, Finland
+ Antonis Kakas, University of Cyprus, Cyprus
+ Joohyung Lee, Arizona State University, USA
+ Vladimir Lifschitz, University of Texas at Austin, USA
+ Fangzhen Lin, Hong Kong University of Science and Technology, China
+ Jorge Lobo, ICREA - Universitat Pompeu Fabra, Barcelona, Spain
+ Robert Mercer, University of Western Ontario, Canada
+ Alessandra Mileo, National University of Ireland, Ireland
+ Mauricio Osorio, Universidad de las Americas Puebla, Mexico
+ Ramon Otero, University of Corunna, Spain
+ David Pearce, Universidad Politecnica de Madrid, Spain
+ Axel Polleres, Siemens AG - Corporate Technology, Vienna, Austria
+ Enrico Pontelli, New Mexico State University, USA
+ Alessandro Provetti, University of Messina, Italy
+ Chiaki Sakama, Wakayama University, Japan
+ Torsten Schaub, University of Potsdam, Germany
+ John Schlipf, University of Cincinnati, USA
+ Terrance Swift, Universidade Nova de Lisboa, Portugal
+ Evgenia Ternovska, Simon Fraser University, Canada
+ Hans Tompits, Vienna University of Technology, Austria
+ Mirek Truszczynski, University of Kentucky, USA
+ Agustin Valverde, University of Malaga, Spain
+ Kewen Wang, Griffith University, Australia
+ Yisong Wang, Guizhou University, China
+ Stefan Woltran, Vienna University of Technology, Austria
+ Jia-Huai You, University of Alberta, Canada
+ Yan Zhang, University of Western Sydney, Australia
+ Yi Zhou, University of Western Sydney, Australia
+
+CONTACT
+
+ e-mail to lpnmr2013@gmail.com
+
